@@ -31,20 +31,18 @@ function Slide() {
   return (
     <div className="max-w-[1400px] h-[700px] w-full m-auto py-16 px-4 relative">
       <div
-        style={{ backgroundImage: `url ${slides[0]?.url}` }}
+        style={{ backgroundImage: `url(${slides[0].url}) ` }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
       >
         <div
-          style={{ backgroundImage: `url ${slides[0]?.url}` }}
+          style={{ backgroundImage: `url (${slides[0]?.url})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
         >
-          <div className="flex justify-end mr-40 gap-[9px] pt-[15px]">
-            <button>
-              <Button onClick={prevSlide} />
-            </button>
-            <button>
-              <LeftButton onClick={nextSlide} />
-            </button>
+          <div className="abslute bottom-[100%] -translate-z-0 translate-y-[-100%] ">
+            <Button onClick={prevSlide} />
+          </div>
+          <div className="abslute bottom-[100%] -translate-z-0 translate-y-[-100%] ">
+            <LeftButton onClick={nextSlide} />
           </div>
         </div>
       </div>
