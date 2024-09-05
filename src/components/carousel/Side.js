@@ -29,7 +29,7 @@ function Slide() {
     setCurrentIndex(newIndex);
   };
   return (
-    <div className="max-w-[1400px] h-[700px] w-full m-auto py-16 px-4 relative">
+    <div className="max-w-[1400px] h-[700px] w-full m-auto py-16 px-4 relative group">
       <div
         style={{ backgroundImage: `url(${slides[0].url}) ` }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -38,10 +38,10 @@ function Slide() {
           style={{ backgroundImage: `url (${slides[0]?.url})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
         >
-          <div className="abslute bottom-[100%] -translate-z-0 translate-y-[-100%] ">
+          <div className=" hidden group-hover:block abslute bottom-[100%] -translate-z-0 translate-y-[-100%] ">
             <Button onClick={prevSlide} />
           </div>
-          <div className="abslute bottom-[100%] -translate-z-0 translate-y-[-100%] ">
+          <div className=" hidden group-hover:block abslute bottom-[100%] -translate-z-0 translate-y-[-100%] ">
             <LeftButton onClick={nextSlide} />
           </div>
         </div>
