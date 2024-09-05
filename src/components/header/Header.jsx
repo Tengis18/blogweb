@@ -13,18 +13,12 @@ export const Header = () => {
         <div className=" container flex  items-cente justify-center">
           <LogoIcon/>
            <div className="flex md:w-[854px] md:h-[36px]   ">
-                {/* <div className="w-[667px] h-[36px] flex gap-10 justify-center">
-                    <button onClick={handleMenu}>
-                         <a href="#Header">Home</a>
-                     </button>
-                    <button onClick={handleMenu}>
-                     <a href="#BlogListingPage">Blog</a>
-                   </button> 
-                     <button onClick={handleMenu}>
-                         <a href="#ContactUsPage">Contact</a>
-                     </button> 
+                <div className="w-[667px] h-[36px] flex gap-10 justify-center">
+                    <button >Home</button>
+                    <button > Blog</button> 
+                     <button >Contact</button> 
                </div>
-                */}
+               
             <div className="py-2 px-4 justify-center gap-3 items-center rounded-md bg-[#F4F4F5] flex">
                  <input type="text" className="bg-[#F4F4F5] outline-none " placeholder="serch"/>
                  <button>

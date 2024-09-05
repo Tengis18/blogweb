@@ -1,41 +1,26 @@
-import { Header } from "../header/Header";
-import { Footer } from "../footer/Footer";
-import { useEffect, useState } from "react";
+import { generatMonth } from "../util/generatMonth";
 
-const ArticleCard = ({ article }) => {
+export const ArticleCard = ({ article }) => {
   const publishedDate = new Date(article.published_at);
-
-  const generatMonth = (month) => {
-    switch (month) {
-      case 1:
-        return "January";
-      case 2:
-        return "February";
-      case 3:
-        return "March";
-      case 4:
-        return "April";
-      case 5:
-        return "May";
-      case 6:
-        return "June";
-      case 7:
-        return "July";
-      case 8:
-        return "August";
-      case 9:
-        return "September";
-      case 10:
-        return "October";
-      case 11:
-        return "November";
-      case 12:
-        return "December";
-    }
-  };
-
+  console.log("publishedDate", publishedDate);
   return (
-    <div className="w-[400px] h-[475px] border-[#E8E8EA] rounded-xl border p-4 flex flex-col justify-between">
+    <div className="w-[400px] h-[475px] border-[#E8E8EA] rounded-xl border p-4 flex flex-col justify-between mt-20">
+      {/* <div>
+        <h1 className="text-[24px] font-bold pl-40">All Blog Post</h1>
+        <div className=" pl-40 mt-9 flex">
+          <div className="w-[500px]">
+            <button className="text-[#D4A373] "> All</button>
+            <button className="text-[#495057] ml-5">Deign</button>
+            <button className="text-[#495057] ml-5">Travel</button>
+            <button className="text-[#495057] ml-5">Fashion</button>
+            <button className="text-[#495057] ml-5">Technology</button>
+            <button className="text-[#495057] ml-5">Branding</button>
+          </div>
+          <div className="flex justify-end mr-40 text-end w-[860px]">
+            <button className="text-[#495057] ">View All</button>
+          </div>
+        </div>
+      </div> */}
       <div className="flex flex-col gap-4">
         <div
           style={{
@@ -64,30 +49,3 @@ const ArticleCard = ({ article }) => {
     </div>
   );
 };
-
-export default function HomePage() {
-  const [articles, setArticles] = useState([]);
-
-  const fetchData = () => {
-    fetch("https://dev.to/api/articles")
-      .then((response) => response.json())
-      .then((data) => setArticles(data));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  return (
-    <div className="flex flex-col items-center w-full">
-      <Header />
-      <div className="container flex flex-wrap justify-between gap-5 max-w-[1280px]">
-        {articles.map((article) => {
-          return <ArticleCard article={article} />;
-        })}
-      </div>
-
-      <Footer />
-    </div>
-  );
-}

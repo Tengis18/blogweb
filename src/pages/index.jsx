@@ -1,12 +1,11 @@
-import { Contact } from "@/components/agrement/Contact";
-import ContactUsPage from "@/components/pages/ContactUs";
-import HomePage from "@/components/pages/HomePage";
-
+import Slide from "@/components/carousel/Side";
+import { HomePage } from "@/components/pages/HomePage";
 
 export default function Home() {
   return (
     <div>
-      <HomePage/>
-        </div>
+      {/* <HomePage /> */}
+      <Slide />
+    </div>
   );
 }
