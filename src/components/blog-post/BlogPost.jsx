@@ -84,7 +84,6 @@ export const BlogPostCard = () => {
             <div className="md:w-[360px] md:h-[188px] mt-10 ml-5">
               <div className=" text-center pt-1  bg-slate-100  md:w-[86px] md:h-[28px]   rounded-[6px]">
                 <h1 className="text-[14px] font-[500] text-center text-[#4B6BFB]">
-                  {" "}
                   Technology
                 </h1>
               </div>
@@ -103,7 +102,6 @@ export const BlogPostCard = () => {
             <div className="md:w-[360px] md:h-[188px] mt-10 ml-5">
               <div className=" text-center pt-1  bg-slate-100  md:w-[86px] md:h-[28px]   rounded-[6px]">
                 <h1 className="text-[14px] font-[500] text-center text-[#4B6BFB]">
-                  {" "}
                   Technology
                 </h1>
               </div>
@@ -122,7 +120,6 @@ export const BlogPostCard = () => {
             <div className="w-[360px] h-[188px] mt-10 ml-5">
               <div className=" text-center pt-1  bg-slate-100  md:w-[86px] md:h-[28px]   rounded-[6px]">
                 <h1 className="text-[14px] font-[500] text-center text-[#4B6BFB]">
-                  {" "}
                   Technology
                 </h1>
               </div>
@@ -143,7 +140,6 @@ export const BlogPostCard = () => {
             <div className="md:w-[360px] md:h-[188px] mt-10 ml-5">
               <div className=" text-center pt-1  bg-slate-100  md:w-[86px] md:h-[28px]   rounded-[6px]">
                 <h1 className="text-[14px] font-[500] text-center text-[#4B6BFB]">
-                  {" "}
                   Technology
                 </h1>
               </div>
@@ -162,7 +158,6 @@ export const BlogPostCard = () => {
             <div className="md:w-[360px] md:h-[188px] mt-10 ml-5">
               <div className=" text-center pt-1  bg-slate-100  md:w-[86px] md:h-[28px]   rounded-[6px]">
                 <h1 className="text-[14px] font-[500] text-center text-[#4B6BFB]">
-                  {" "}
                   Technology
                 </h1>
               </div>
@@ -181,7 +176,6 @@ export const BlogPostCard = () => {
             <div className="md:w-[360px] md:h-[188px] mt-10 ml-5">
               <div className=" text-center pt-1  bg-slate-100  md:w-[86px] md:h-[28px]   rounded-[6px]">
                 <h1 className="text-[14px] font-[500] text-center text-[#4B6BFB]">
-                  {" "}
                   Technology
                 </h1>
               </div>

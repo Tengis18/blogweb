@@ -7,9 +7,10 @@ import { TrendingCard } from "../trending/Trending";
 
 export const HomePage = () => {
   const [articles, setArticles] = useState([]);
+  const [page, setPage] = useState(9);
 
   const fetchData = () => {
-    fetch("https://dev.to/api/articles")
+    fetch(`https://dev.to/api/articles?per_page=${page}`)
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
