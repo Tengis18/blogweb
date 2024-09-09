@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { ArticleCard } from "../blog-post/ArticleCard";
 import { Carucel } from "../carousel/Carusel.jsx";
 import { TrendingCard } from "../trending/Trending";
+import { ArticalSuport } from "../svg/ArticalSuport";
+import { Artsuport } from "../svg/Artsuport";
 
 export const HomePage = () => {
   const [articles, setArticles] = useState([]);
@@ -23,11 +25,13 @@ export const HomePage = () => {
       <Header />
       <Carucel />
       <TrendingCard />
+      <ArticalSuport />
       <div className="container flex flex-wrap justify-between gap-5 max-w-[1280px]">
         {articles.map((article) => {
           return <ArticleCard article={article} />;
         })}
       </div>
+      <Artsuport />
       <Footer />
     </div>
   );
