@@ -1,9 +1,10 @@
 import BlogListing from "@/components/pages/BlogListing";
 
-export default function BlogPage() {
+const BlogPage = () => {
   return (
     <div>
       <BlogListing />
     </div>
   );
-}
+};
+export default BlogPage;

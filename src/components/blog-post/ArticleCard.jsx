@@ -28,10 +28,19 @@ export const ArticleCard = ({ article }) => {
           </div>
         </div>
 
-        <p className=" text-[#97989F]">
-          {publishedDate.getFullYear()}-{generatMonth(publishedDate.getMonth())}
-          -{publishedDate.getDay()}
-        </p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <img
+              src={article.user.profile_image_90}
+              className="rounded-full w-[36px]"
+            />
+            <p className="text-[#97989F] ">{article.user.name}</p>
+          </div>
+          <p className=" text-[#97989F]  w-[126px] text-[16px]">
+            {publishedDate.getFullYear()}-
+            {generatMonth(publishedDate.getMonth())}-{publishedDate.getDay()}
+          </p>
+        </div>
       </div>
     </div>
   );

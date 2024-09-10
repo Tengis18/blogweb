@@ -27,7 +27,7 @@ export default function BlogListing() {
       <Suport />
       {articles.map((article) => {
         return (
-          <Link href={`/blog-list${article.id}`}>
+          <Link href={`/blog-list/${article.id}`}>
             <ArticleCard article={article} />
           </Link>
         );
