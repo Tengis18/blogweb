@@ -1,5 +1,3 @@
-import { Header } from "../header/Header";
-import { Footer } from "../footer/Footer";
 import { useEffect, useState } from "react";
 import { ArticleCard } from "../blog-post/ArticleCard";
 import { Carucel } from "../carousel/Carusel.jsx";
@@ -21,8 +19,7 @@ export const HomePage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-full">
-      <Header />
+    <div className="flex justify-center flex-col items-center">
       <Carucel />
       <TrendingCard />
       <ArticalSuport />
@@ -32,7 +29,6 @@ export const HomePage = () => {
         })}
       </div>
       <Artsuport />
-      <Footer />
     </div>
   );
 };

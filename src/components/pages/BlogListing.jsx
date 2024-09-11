@@ -1,6 +1,5 @@
 import { ArticleCard } from "@/components/blog-post/ArticleCard";
-import { Footer } from "@/components/footer/Footer";
-import { Header } from "@/components/header/Header";
+
 import { Artsuport } from "@/components/svg/Artsuport";
 import { Suport } from "@/components/svg/Suport";
 import Link from "next/link";
@@ -23,7 +22,6 @@ export default function BlogListing() {
   // handleLoadomre => page+6
   return (
     <div className="container  flex-wrap flex ml-64 justify-center w-full  gap-5 ">
-      <Header />
       <Suport />
       {articles.map((article) => {
         return (
@@ -34,7 +32,6 @@ export default function BlogListing() {
       })}
       {/* <button onClick={}>LoadMore</button> */}
       <Artsuport />
-      <Footer />
     </div>
   );
 }
