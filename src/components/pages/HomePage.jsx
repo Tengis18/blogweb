@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArticleCard } from "../blog-post/ArticleCard";
 import { Carucel } from "../carousel/Carusel.jsx";
-import { TrendingCard } from "../trending/Trending";
+import { Trending } from "../trending/Trending";
 import { ArticalSuport } from "../svg/ArticalSuport";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ export const HomePage = () => {
   return (
     <div className="flex justify-center flex-col items-center">
       <Carucel />
-      <TrendingCard />
+      <Trending />
       <ArticalSuport />
       <div>
         <div className="container  flex-wrap flex ml-64  w-full  gap-5 ">
@@ -35,9 +35,6 @@ export const HomePage = () => {
                 href={`/blog-list/${article.id}`}
                 key={article.id.description}
               >
-                {/* <div className="w-[100px] h-[30px] bg-[#4B6BFB0D] flex justify-center items-center rounded-md text-[#4B6BFB]">
-                  {article.tag_list[0]}
-                </div> */}
                 <ArticleCard article={article} key={article.description} />
               </Link>
             );

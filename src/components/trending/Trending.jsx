@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { ArticleCard } from "../blog-post/ArticleCard";
 import Link from "next/link";
-export const TrendingCard = () => {
+import { TreandingCard } from "./TreandingCard";
+
+export const Trending = () => {
   const [articles, setArticles] = useState([]);
   const fetchData = () => {
     fetch(`https://dev.to/api/articles/latest?per_page=4`)
@@ -21,7 +22,7 @@ export const TrendingCard = () => {
           {articles?.map((article) => {
             return (
               <Link href={`/blog-list/${article.id}`}>
-                <ArticleCard article={article} />
+                <TreandingCard article={article} />
               </Link>
             );
           })}
