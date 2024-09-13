@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import { LogoIcon } from "../svg/LogoIcon";
 import Link from "next/link";
+import { SearchDropDwon } from "../drop/Drop";
 
 export const Header = () => {
   const [searchValue, setSearchValue] = useState("");
   const [articlesForSearch, setArticlesForSearch] = useState([]);
+  if (typeof window !== "undefined") {
+    document.addEventListener("mousedown", () => {
+      setSearchValue("");
+    });
+  }
 
   const fetchSearchData = () => {
     fetch(`https://dev.to/api/articles?per_page=100`)
@@ -26,7 +32,7 @@ export const Header = () => {
       <div className="container mx-auto pt-10  ">
         <div className=" container flex  items-cente justify-center">
           <LogoIcon />
-          <div className="flex md:w-[854px] md:h-[36px]   ">
+          <div className="flex md:w-[854px] md:h-[36px] relative">
             <div className="w-[667px] h-[36px] flex gap-10 justify-center">
               <Link href={`/`}>
                 <button>Home</button>
@@ -44,6 +50,7 @@ export const Header = () => {
                 type="text"
                 className="border border-red-950 "
                 onChange={handleInputChange}
+                value={searchValue}
               />
             </div>
             <SearchDropDwon
@@ -54,23 +61,5 @@ export const Header = () => {
         </div>
       </div>
     </main>
-  );
-};
-const SearchDropDwon = ({ filteredArticles, searchValue }) => {
-  filteredArticles.lenght = 5;
-  return (
-    <div
-      className={`${
-        searchValue ? "h-[200px]" : "h-0"
-      } flex flex-col justify-end items-end gap-2 transition-all duration-200 overflow-hidden absolute `}
-    >
-      {filteredArticles?.map((article) => {
-        return (
-          <Link href={`blogs/${article.id}`}>
-            <div>{article?.title}</div>;
-          </Link>
-        );
-      })}
-    </div>
   );
 };

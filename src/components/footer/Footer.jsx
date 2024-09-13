@@ -17,23 +17,37 @@ export const Footer = () => {
             <h1 className="mt-2  text-[#696A75]">Phone : 880 123 456 789</h1>
           </div>
 
-          <div className="flex flex-col items-center justify-center  md:w-[521px] md:h-[88px]">
-            <button>Home</button>
-            <button className="mt-2">Blog</button>
-            <button className="mt-2">Contact</button>
+          <div className="flex flex-col items-center justify-center gap-5 md:w-[521px] md:h-[88px]">
+            <Link href={`/`}>
+              <button>Home</button>
+            </Link>
+            <Link href={`/blog-list`}>
+              <button>Blog</button>
+            </Link>
+
+            <Link href={`/contact-us`}>
+              <button>Contact</button>
+            </Link>
           </div>
           <div className="md:w-[144px] md:h-[16px] flex items-center justify-center gap-5">
-            <Face />
-            <Twi />
-            <Insdaa />
+            <Link href={`/https://www.facebook.com/</div>`}>
+              <Face />
+            </Link>
+            <Link href={`/https://x.com/`}>
+              <Twi />
+            </Link>
+            <Link href={`/https://www.instagram.com/`}>
+              <Insdaa />
+            </Link>
+
             <In />
           </div>
         </div>
         <div className="md:w-[1216px] md:h-[95px] flex pl-20 pt-10">
-          <div className="md:w-[231px] md:h-[54px] ml-[10px]">
+          <div className="md:w-[231px] md:h-[54px] ml-[50px]">
             <BigLogo />
           </div>
-          <div className="md:w-[921px] md:h-[24px] flex justify-end gap-[20px]">
+          <div className="md:w-[921px] md:h-[24px]  flex justify-end gap-[20px]">
             <button className="flex">
               Terms of Use
               <p className="text-[#E8E8EA] ml-[10px]">|</p>
